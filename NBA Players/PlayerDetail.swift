@@ -29,6 +29,8 @@ struct PlayerDetail: View {
                 .fontWeight(.heavy)
                 .padding(.bottom, 10)
             
+            Text("Hi my Friend")
+            
             // show our custom view
             StatText(statName: "Age", statValue: "\(player.age)" )
             StatText(statName: "Height", statValue: player.height)
@@ -44,6 +46,30 @@ struct PlayerDetail: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerDetail(player: players[0])
+        
+        Group {
+            
+            
+            
+            PlayerDetail(player: players[2])
+                .previewDevice("iPhone 14")
+            
+            // Test different or same devices with different accesibility font size
+            
+            PlayerDetail(player: players[2])
+                .environment(\.sizeCategory, .extraExtraExtraLarge)
+                .previewDevice("iPhone SE (3rd generation)")
+            
+            PlayerDetail(player: players[2])
+                .environment(\.sizeCategory, .extraSmall)
+                .previewDevice("iPhone SE (3rd generation)")
+            
+            PlayerDetail(player: players[2]).previewDevice("iPhone 14 Pro")
+            
+            PlayerDetail(player: players[2]).previewDevice("iPad Air (5th generation)")
+
+        }
+        
+    
     }
 }

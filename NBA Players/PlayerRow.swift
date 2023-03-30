@@ -35,6 +35,26 @@ struct PlayerRow_Previews: PreviewProvider {
     static var previews: some View {
         
         // we can specify custom sizes for our previews, here we create a row
-        PlayerRow(player: players[0]).previewLayout(.fixed(width: 500, height: 100))
+        
+        
+        // we can return anything we want here, not neccessary the  PlayerRow()
+        
+        //PlayerRow(player: players[0]).previewLayout(.sizeThatFits)
+        
+        //PlayerRow(player: players[0]).previewLayout(.device)
+        
+        //PlayerRow(player: players[0]).previewDevice("iPhone 14")
+        
+        // Show multiple previous
+        Group {
+            
+            PlayerRow(player: players[0]).previewLayout(.fixed(width: 500, height: 100))
+            PlayerRow(player: players[0]).previewDevice("iPhone 14")
+            PlayerRow(player: players[0]).previewDevice("iPhone 14 Pro")
+            PlayerRow(player: players[0]).previewDevice("iPad Air (5th generation)")
+
+        }
+
+        
     }
 }
