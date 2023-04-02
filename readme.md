@@ -7,3 +7,7 @@ Focus on understanding the new approach on how to work with SwiftUI compared wit
 Usage of common UI elements like List, NavigationView, Text, Image, etc.
 
 Review of the new XCode functionalities related with preview and live preview.
+
+![](./images/image3.png)
+![](./images/image2.png)
+![](./images/image1.png)
