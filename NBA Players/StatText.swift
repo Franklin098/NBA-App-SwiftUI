@@ -29,7 +29,8 @@ struct StatText: View {
                 .fontWeight(.light)
             
             Spacer()
-        }
+            
+        }.minimumScaleFactor(0.5) // decrease the size up to a half
     }
 }
 

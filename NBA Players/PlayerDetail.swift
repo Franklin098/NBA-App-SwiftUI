@@ -25,11 +25,11 @@ struct PlayerDetail: View {
                 .offset(x:0, y:  -90).padding(.bottom, -70)
             
             Text(player.name)
-                .font(.system(size: 40))
+                .font(.system(size: 50))
                 .fontWeight(.heavy)
-                .padding(.bottom, 10)
-            
-            Text("Hi my Friend")
+                .padding(.horizontal, 10.0)
+                .lineLimit(1)
+                .minimumScaleFactor(0.5) // cut the font size up to a half
             
             // show our custom view
             StatText(statName: "Age", statValue: "\(player.age)" )
@@ -64,7 +64,7 @@ struct ContentView_Previews: PreviewProvider {
                 .environment(\.sizeCategory, .extraSmall)
                 .previewDevice("iPhone SE (3rd generation)")
             
-            PlayerDetail(player: players[2]).previewDevice("iPhone 14 Pro")
+            PlayerDetail(player: players[2]).previewDevice("iPhone 14 Pro Max")
             
             PlayerDetail(player: players[2]).previewDevice("iPad Air (5th generation)")
 
